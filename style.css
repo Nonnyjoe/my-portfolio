@@ -63,12 +63,13 @@ body {
     padding: 1rem;
     height: 72vh;
     /* border-right: 2px solid #f37b6b; */
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     transition: all 1.1s .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .me {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: bold;
+    /* font-family: 'Kanit', sans-serif; */
     letter-spacing: 2px;
     line-height: 1.2;
 }
@@ -153,13 +154,12 @@ body {
     padding: 1rem;
     background-color: #2a2b37;
     border-radius: 1rem;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .skill img {
     width: 25px;
     height: auto;
-    filter: grayscale(80%);
+    filter: grayscale(70%);
     transition: all 0.5s ease;
 }
 
@@ -181,7 +181,6 @@ body {
     padding-bottom: 3rem;
     background-color: #2a2b37;
     border-radius: 1rem;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 #card1,
@@ -200,6 +199,13 @@ body {
 
 .card-img {
     height: 8rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    transition: all .5s ease;
+}
+
+.card-img:hover {
+    filter: blur(1px);
 }
 
 .card-text {
@@ -287,6 +293,10 @@ body {
     justify-content: space-around;
     height: 5rem;
     border-radius: 4rem;
+}
+
+.profile {
+    color: #f37b6b;
 }
 
 .m-sections {

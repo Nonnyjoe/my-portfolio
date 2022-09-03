@@ -29,8 +29,10 @@ contactBtn.onclick = (() => {
 
 downBtn.onclick = (() => {
     aboutContainer.style.marginTop = "-31rem";
+    aboutContainer.style.opacity = "0"
 });
 
 upBtn.onclick = (() => {
+    aboutContainer.style.opacity = "1"
     aboutContainer.style.marginTop = "";
 });
