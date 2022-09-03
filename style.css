@@ -51,7 +51,7 @@ body {
 .about-me {
     padding-top: 0px!important;
     overflow: hidden !important;
-    padding: 0rem;
+    padding: 0.3rem;
 }
 
 .about-color {
@@ -72,6 +72,10 @@ body {
 
 .hail {
     color: #f37b6b;
+}
+
+.text-sec {
+    margin-top: 1.2rem;
 }
 
 .design {
