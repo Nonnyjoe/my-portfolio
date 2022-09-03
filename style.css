@@ -12,13 +12,14 @@ body {
 .main-container {
     height: 100vh;
     overflow: hidden;
-    background-color: #212121;
+    background: linear-gradient(135deg, #050810, #20222e, #20222e, #050810);
+    /* background-color: #212121; */
     margin: 0px;
     padding: 1.2rem;
 }
 
 .mobile-container {
-    height: 75vh;
+    height: 72vh;
     gap: 0.5rem;
     width: 306%;
     margin-top: 3rem;
@@ -31,19 +32,119 @@ body {
 }
 
 .mobile-sec {
-    border: 2px solid #3a3b3c;
-    background-color: #242526;
+    /* border: 2px solid #3a3b3c; */
+    /* background-color: #2a2b37; */
     width: 50%;
+    border-radius: 1.5rem;
     padding: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
     transition: all 1.6s 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.mobile-sec::-webkit-scrollbar {
+    display: none;
+}
+
+.about-me {
+    padding-top: 0px!important;
+    overflow: hidden !important;
+    padding: .5rem;
+}
+
+.about-color {
+    /* background-color: #2a2b37; */
+    background-color: #2a2b37;
+    backdrop-filter: blur(14px);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    height: 72vh;
+    /* border-right: 2px solid #f37b6b; */
+}
+
+.me {
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.hail {
+    color: #f37b6b;
+}
+
+.design {
+    color: #f37b6b;
+    font-size: 2rem;
+}
+
+.img-sec {
+    position: relative;
+    text-align: center;
+}
+
+.img-sec img {
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.rotate {
+    transform: rotate(-85deg);
+    width: 280px;
+    display: none;
+}
+
+.main-img {
+    /* position: absolute; */
+    z-index: 4;
+    width: 200px;
+}
+
+.know-more-btn {
+    background-color: transparent;
+    color: #e4e6eb;
+    border: 1px solid #f37b6b;
+    letter-spacing: 1px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.know-more-btn:hover {
+    color: #20222e;
+    background-color: #f37b6b;
+    border: 1px solid;
+}
+
+.skills-sec {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #2a2b37;
+    border-radius: 1rem;
+}
+
+.skill img {
+    width: 25px;
+    height: auto;
+}
+
+
+/* .skill p {
+    display: inline-block;
+} */
+
+.skill {
+    text-align: center;
 }
 
 #card1,
 #card2,
 #card3 {
-    border: 2px solid #3a3b3c;
-    background-color: #212121;
-    width: 18rem;
+    /* border: 2px solid #3a3b3c; */
+    border-radius: .7rem;
+    background-color: #20222e;
+    width: 17rem;
+    margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
     font-size: 13px;
@@ -51,15 +152,36 @@ body {
 }
 
 .card-img {
-    height: 6rem;
+    height: 8rem;
 }
 
 .card-text {
     margin-bottom: 0.5rem !important;
 }
 
+.card-links {
+    margin-bottom: 1rem;
+}
+
+.card-links a {
+    background-color: #f37b6b;
+    color: whitesmoke;
+    border: #e6a9a1;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+}
+
+.card-links a:hover {
+    background-color: transparent;
+    color: #f37b6b;
+}
+
 .projects {
     margin-top: 10px;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    background-color: #2a2b37;
+    border-radius: 1rem;
 }
 
 .carousel-indicators {
@@ -70,22 +192,21 @@ body {
     padding: .5rem !important;
 }
 
-.contact-form {
+.contact-form1 {
     padding: 1rem;
-    background-color: #212121;
-}
-
-.contact-form p {
-    font-size: 13px;
+    background-color: #20222e;
+    background-color: #2a2b37;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
 }
 
 .contact-form input {
     width: 100%;
     border-radius: 7px;
-    height: 2.2rem;
+    height: 2.3rem;
     padding-left: .7rem;
-    margin-bottom: .5rem;
-    background-color: #3a3b3c;
+    margin-bottom: .6rem;
+    background-color: #20222e;
 }
 
 .contact-form textarea {
@@ -93,18 +214,22 @@ body {
     border-radius: 7px;
     padding-left: .7rem;
     padding-top: .7rem;
-    background-color: #3a3b3c;
+    background-color: #20222e;
 }
 
 .submit {
     width: 50% !important;
+    border-top: 2px solid #f37b6b;
+    border-left: 2px solid #f37b6b;
+    color: whitesmoke;
 }
 
 .address {
     margin-top: .5rem;
     padding: 1rem;
     padding-bottom: 0.5rem;
-    background-color: #212121;
+    background-color: #2a2b37;
+    border-radius: 1rem;
 }
 
 .navigation {
@@ -112,8 +237,10 @@ body {
     border-top: 2px solid #3a3b3c;
     padding: 1rem;
     margin-top: 1rem;
-    background-color: #242526;
+    background-color: #2a2b37;
     justify-content: space-around;
+    height: 5rem;
+    border-radius: 4rem;
 }
 
 .m-sections {
