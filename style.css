@@ -36,7 +36,7 @@ body {
     /* border: 2px solid #3a3b3c; */
     /* background-color: #2a2b37; */
     width: 50%;
-    border-radius: 1.5rem;
+    margin-top: 0.3rem;
     padding: 0.5rem;
     overflow-x: hidden;
     overflow-y: auto;
@@ -57,7 +57,7 @@ body {
 
 .about-color {
     /* background-color: #2a2b37; */
-    background-color: #2a2b37;
+    background-color: #2a2b377a;
     /* backdrop-filter: blur(14px); */
     border-radius: 1.5rem;
     padding: 1rem;
@@ -152,7 +152,7 @@ body {
 .skills-sec {
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background-color: #2a2b37;
+    background-color: #2a2b377a;
     border-radius: 1rem;
 }
 
@@ -179,7 +179,7 @@ body {
     margin-top: 10px;
     padding: 1rem;
     padding-bottom: 3rem;
-    background-color: #2a2b37;
+    background-color: #2a2b377a;
     border-radius: 1rem;
 }
 
@@ -239,8 +239,7 @@ body {
 
 .contact-form1 {
     padding: 1rem;
-    background-color: #20222e;
-    background-color: #2a2b37;
+    background-color: #2a2b377a;
     border-radius: 1rem;
     margin-bottom: 2rem;
 }
@@ -252,9 +251,9 @@ body {
     padding-left: .7rem;
     margin-bottom: .6rem;
     background-color: #20222e;
-    border-top: none;
-    border-left: none;
+    border: 1px solid black;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    word-spacing: 1px;
 }
 
 .contact-form textarea {
@@ -264,23 +263,31 @@ body {
     padding-top: .7rem;
     background-color: #20222e;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid black;
 }
 
 .submit {
     width: 50% !important;
-    border-top: 2px solid #f37b6b !important;
-    border-left: 2px solid #f37b6b !important;
-    border-bottom: none;
-    border-right: none;
     color: whitesmoke;
+    background-color: #f37b6b !important;
+    background: #f37b6b;
+    margin: .3rem;
+    letter-spacing: 2px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all .5s ease;
+}
+
+.submit:hover {
+    background-color: transparent !important;
+    border: 1px solid #f37b6b;
 }
 
 .address {
     margin-top: .5rem;
     padding: 1rem;
-    padding-bottom: 0.5rem;
-    background-color: #2a2b37;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    background-color: #2a2b377a;
     border-radius: 1rem;
 }
 
@@ -289,7 +296,8 @@ body {
     border-top: 2px solid #f37b6b;
     padding: 1rem;
     margin-top: 1rem;
-    background-color: #2a2b37;
+    /* background-color: #2a2b37; */
+    background-color: #595b701f;
     justify-content: space-around;
     height: 5rem;
     border-radius: 4rem;
@@ -303,4 +311,32 @@ body {
     text-align: center;
     transition: all .5s .5s ease-in;
     cursor: pointer;
+}
+
+.circle {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    background-color: #f37b6b1e;
+    fill-opacity: 0.2;
+    filter: blur(20px);
+    position: absolute;
+    top: -20px;
+    left: -35px;
+    z-index: -1;
+}
+
+
+/* #2a2b377a  */
+
+.circle2 {
+    height: 30rem;
+    width: 30rem;
+    background-color: #f37b6b1e;
+    filter: blur(20px);
+    position: absolute;
+    border-radius: 50%;
+    top: 25rem;
+    left: 5rem;
+    z-index: -2;
 }
