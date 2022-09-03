@@ -19,7 +19,7 @@ body {
 }
 
 .mobile-container {
-    height: 72vh;
+    height: 70vh;
     gap: 0.5rem;
     width: 306%;
     margin-top: 3rem;
@@ -36,7 +36,7 @@ body {
     /* background-color: #2a2b37; */
     width: 50%;
     border-radius: 1.5rem;
-    padding: 1rem;
+    padding: 0.3rem;
     overflow-x: hidden;
     overflow-y: auto;
     transition: all 1.6s 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -51,7 +51,7 @@ body {
 .about-me {
     padding-top: 0px!important;
     overflow: hidden !important;
-    padding: .5rem;
+    padding: 0rem;
 }
 
 .about-color {
