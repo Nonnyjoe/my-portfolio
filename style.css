@@ -78,6 +78,19 @@ body {
     color: #f37b6b;
 }
 
+.hail:before {
+    height: auto;
+    width: 50px !important;
+    border: none;
+    border-bottom: 2px solid #f37b6b !important;
+    content: " fdf";
+    /* position: absolute; */
+    color: transparent;
+    display: inline-block;
+    transform: translateY(-.8rem);
+    margin-right: .5rem;
+}
+
 .text-sec {
     margin-top: 1.5rem;
 }
@@ -95,6 +108,11 @@ body {
 .img-sec img {
     height: auto;
     margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.main-img-lg {
+    display: none;
 }
 
 .rotate {
@@ -181,6 +199,10 @@ body {
     padding-bottom: 3rem;
     background-color: #2a2b377a;
     border-radius: 1rem;
+}
+
+.mobile-screen-projects {
+    display: none;
 }
 
 #card1,
@@ -332,11 +354,110 @@ body {
 .circle2 {
     height: 30rem;
     width: 30rem;
-    background-color: #f37b6b0c;
+    background-color: rgba(243, 123, 107, 0.08);
     filter: blur(20px);
     position: absolute;
     border-radius: 50%;
     top: 25rem;
     left: 5rem;
     z-index: -2;
+}
+
+@media screen and (min-width: 576px) and (max-width: 850px) {
+    p {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 2rem;
+    }
+    h6 {
+        font-size: 1.5rem;
+    }
+    .lg-style a {
+        font-size: 2rem;
+    }
+    .mobile-container {
+        margin-top: 5rem;
+        gap: 2rem;
+        height: 75vh;
+    }
+    .about-color {
+        height: 75vh;
+    }
+    .about-me {
+        padding: 2rem;
+    }
+    .about-color1 {
+        padding: 1.5rem;
+    }
+    .main-img {
+        display: none;
+    }
+    .main-img-lg {
+        display: block;
+        width: 420px;
+        height: auto;
+        transform: translateX(-210px);
+    }
+    .img-sec img {
+        margin-top: 0px;
+    }
+    .text-sec {
+        margin-top: 57%;
+    }
+    .text-sec p {
+        font-size: 1.5rem;
+    }
+    .me {
+        font-size: 3rem;
+    }
+    .know-more-btn {
+        height: 3.5rem;
+        width: 16rem;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        margin-top: 1.5rem;
+    }
+    .more {
+        font-size: 1.5rem;
+        transform: translateY(-100px);
+        padding: 2rem;
+        opacity: 0;
+    }
+    .more h4 {
+        font-size: 2rem;
+    }
+    .slide {
+        display: none;
+    }
+    .mobile-screen-projects {
+        display: inline-flex;
+    }
+    .card-text {
+        font-size: 1.2rem !important;
+    }
+    .contact-form input {
+        height: 3.5rem;
+    }
+    .contact-form textarea {
+        height: 7rem;
+    }
+    .submit {
+        height: 3.5rem !important;
+        font-size: 1.5rem !important;
+        letter-spacing: 5px !important;
+        margin-top: 1.4rem;
+    }
+    .address-row,
+    .contact-form {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-top: 2rem;
+    }
+    .m-sections {
+        font-size: 1.5rem;
+    }
+    .navigation {
+        height: 7rem;
+    }
 }

@@ -48,7 +48,7 @@
             <div class="row align-items-center">
 
                 <div class="col-6 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html">Idogwu<span class="design"> ...</span> </a></h1>
+                    <h1 class="mb-0 site-logo "><a href="index.html">Idogwu<span class="design"> ...</span> </a></h1>
                 </div>
 
                 <div class="col-12 col-md-10 d-none d-xl-block">
@@ -94,34 +94,40 @@
 
     </header>
 
-    <div class="container main-container">
+    <div class="container-fluid main-container">
 
         <div class="mobile-container">
 
             <div class="about-me mobile-sec">
                 <div class="about-color about-color1">
-                    <div class="img-sec">
-                        <img class="main-img" src="./images/pics4web.png" alt="">
-                        <img class="rotate" src="./images/pattern-bg.svg" alt="">
-                    </div>
-                    <div class="text-sec">
-                        <p class="hail">
-                            HELLO THERE,
-                        </p>
-                        <h1 class="me">
-                            I'M IDOGWU
-                        </h1>
+                    <div class="row">
+                        <div class="img-sec col-12 col-md-4 order-md-2">
+                            <img class="main-img" src="./images/pics4web.png" alt="">
+                            <img class="main-img-lg" src="./images/pics-4-website.png" alt="">
+                            <img class="rotate" src="./images/pattern-bg.svg" alt="">
+                        </div>
+                        <div class="text-sec col-12 col-md-8">
+                            <div class="col .align-self-end">
+                                <p class="hail">
+                                    HELLO THERE,
+                                </p>
+                                <h1 class="me">
+                                    I'M IDOGWU
+                                </h1>
 
-                        <h1 class="me ml-5">
-                            CHINONSO,
-                        </h1>
-                        <p>
-                            a frontend developer based in Nigeria.
-                        </p>
+                                <h1 class="me ml-5">
+                                    CHINONSO,
+                                </h1>
+                                <p>
+                                    a frontend developer based in Nigeria.
+                                </p>
+                                <div class="know-more">
+                                    <button class=" btn move-down know-more-btn"> MORE ABOUT ME </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="know-more">
-                        <button class=" btn move-down know-more-btn"> MORE ABOUT ME </button>
-                    </div>
+
 
                 </div>
                 <div class="about-color more mb-5">
@@ -142,7 +148,7 @@
 
             <div class="skills-Projects mobile-sec">
 
-                <div class="skills-sec">
+                <div class="skills-sec col-md-12">
 
                     <h4 class="mb-3">
                         Tools <span class="design">...</span>
@@ -189,7 +195,7 @@
                     </div>
                 </div>
 
-                <div class="projects">
+                <div class="projects col-md-12">
                     <h4>
                         Projects <span class="design">...</span>
                     </h4>
@@ -276,19 +282,87 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
+                    <!-- end of mobile projects -->
+
+                    <!-- medium screen projects starts -->
+                    <div class="row mobile-screen-projects gy-3">
+                        <div class="col-md-6">
+                            <div id="card1" class="card cardEdit">
+                                <img src="./images/Blockchain unn Capture.PNG" class="card-img-top card-img" alt="...">
+                                <div class="card-body ">
+                                    <h6 class="card-title">Blockchain UNN</h6>
+                                    <p class="card-text">A responsive landing page designed for blockchain unn, made with Html, Css, Js and Bootstrap.</p>
+                                    <div class="card-links">
+                                        <a href="https://github.com/Nonnyjoe/blockchainunn" class="btn btn-primary" target="_blank">Github</a>
+                                        <a href="https://nonnyjoe.github.io/blockchainunn/" class="btn btn-primary" target="_blank">Live</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card cardEdit" id="card3">
+                                <img src="./images/Capture-desktop.PNG" class="card-img-top card-img" alt="...">
+                                <div class="card-body ">
+                                    <h6 class="card-title">Clipboard Landing Page</h6>
+                                    <p class="card-text">A responsive landing page, designed as a challange from frontend mentors, built with; Html and Css.</p>
+                                    <div class="card-links">
+                                        <a href="https://github.com/Nonnyjoe/Clipboard-landing-page" class="btn btn-primary" target="_blank">Github</a>
+                                        <a href="https://nonnyjoe.github.io/Clipboard-landing-page/" class="btn btn-primary" target="_blank">Live</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card cardEdit" id="card3">
+                                <img src="./images/Capture accordion.PNG" class="card-img-top card-img" alt="...">
+                                <div class="card-body ">
+                                    <h6 class="card-title">Faq Accordion Card</h6>
+                                    <p class="card-text">A responsive Accordion card, designed as a challange from frontend mentors, built majourly with Html and Css.</p>
+                                    <div class="card-links">
+                                        <a href="https://github.com/Nonnyjoe/faq-accordion-card-main" class="btn btn-primary" target="_blank">Github</a>
+                                        <a href="https://nonnyjoe.github.io/faq-accordion-card-main/" class="btn btn-primary" target="_blank">Live</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card cardEdit" id="card2">
+                                <img src="./images/greener global Capture.PNG" class="card-img-top card-img" alt="...">
+                                <div class="card-body ">
+                                    <h6 class="card-title">Greener Global</h6>
+                                    <p class="card-text">A reponsive company landing page built for Greener Global Exports Limited, powered by Html, Css, Js, Bootstrap and a little PhP .</p>
+                                    <div class="card-links">
+                                        <a href="https://github.com/Nonnyjoe/Greenerglobal" class="btn btn-primary" target="_blank">Github</a>
+                                        <a href="https://nonnyjoe.github.io/Greenerglobal/" class="btn btn-primary" target="_blank">Live</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card cardEdit" id="card3">
+                                <img src="./images/Capture.PNG" class="card-img-top card-img" alt="...">
+                                <div class="card-body ">
+                                    <h6 class="card-title">Social Proof Section Page</h6>
+                                    <p class="card-text">A simple responsive page, designed as a challange from frontend mentors, built with Html and Css.</p>
+                                    <div class="card-links">
+                                        <a href="https://github.com/Nonnyjoe/social-proof-section-master" class="btn " target="_blank">Github</a>
+                                        <a href="https://nonnyjoe.github.io/social-proof-section-master/" class="btn " target="_blank">Live</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
 
                 </div>
 
             </div>
 
-            <div class="contact-me mobile-sec">
-                <div class="contact-form1">
-
-
-                    <div class="contact-form">
+            <div class="contact-me mobile-sec row ">
+                <div class="contact-form1  col-md-12">
+                    <div class="contact-form ">
                         <h4>
                             Contact Me <span class="design">...</span>
                         </h4>
@@ -310,8 +384,8 @@
                     </div>
                 </div>
 
-                <div class="address">
-                    <div class="row gy-2">
+                <div class="address col-md-12">
+                    <div class="row address-row gy-2  mt-2">
                         <div class="col-6">
                             <h6>
                                 Location:
@@ -320,7 +394,6 @@
                                 Enugu, Nigeria
                             </p>
                         </div>
-
                         <div class="col-6">
                             <h6>
                                 Phone:
