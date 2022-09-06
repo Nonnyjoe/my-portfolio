@@ -44,16 +44,16 @@ upBtn.onclick = (() => {
     moreContainer.style.opacity = "0";
 });
 
-submit.addEventListener("click", submited);
+// submit.addEventListener("click", submited);
 
-function submited() {
-    setTimeout(function() {
-        submit.disabled = true;
-        submit.value = "Message Sent"
-        submit.classList.add("submited")
-    }, 1000);
+// function submited() {
+//     setTimeout(function() {
+//         submit.disabled = true;
+//         submit.value = "Message Sent"
+//         submit.classList.add("submited")
+//     }, 1000);
 
-}
+// }
 
 profile2.addEventListener("click", shift);
 

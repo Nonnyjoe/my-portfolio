@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Style -->
+    <!-- style for navbar -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- style for the rest page -->
     <link rel="stylesheet" href="css/style2.css">
 
     <title>Idogwu Chinonso</title>
@@ -49,6 +51,12 @@
                     }, function(error) {
                         console.log('FAILED...', error);
                     });
+
+                setTimeout(function() {
+                    submit.disabled = true;
+                    submit.value = "Message Sent"
+                    submit.classList.add("submited")
+                }, 1000);
             });
         }
     </script>
@@ -73,7 +81,7 @@
             <div class="row align-items-center">
 
                 <div class="col-6 col-xl-2">
-                    <h1 class="mb-0 site-logo "><a href="index.html">Idogwu<span class="design">.js</span> </a></h1>
+                    <h1 class="mb-0 site-logo "><a href="index.html">Idogwu<span class="design"> .dev</span> </a></h1>
                 </div>
 
                 <div class="col-12 col-md-10 d-none d-xl-block">
@@ -104,7 +112,7 @@
         <div class="mobile-container">
 
             <div class="about-me mobile-sec">
-                <div class="about-color about-color1">
+                <div class="about-color about-color1" data-aos="fade-right">
                     <div class="row">
                         <div class="img-sec col-12 col-sm-12 col-md-4 order-md-2">
                             <img class="main-img" src="./images/pics4web-min.png" alt="">
@@ -457,6 +465,10 @@
 
 
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 
 
