@@ -48,9 +48,7 @@ upBtn.onclick = (() => {
 
 // function submited() {
 //     setTimeout(function() {
-//         submit.disabled = true;
-//         submit.value = "Message Sent"
-//         submit.classList.add("submited")
+
 //     }, 1000);
 
 // }
