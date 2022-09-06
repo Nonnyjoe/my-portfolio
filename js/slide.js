@@ -6,6 +6,9 @@ const downBtn = document.querySelector(".move-down");
 const upBtn = document.querySelector(".back-up")
 const aboutContainer = document.querySelector(".about-color1");
 const moreContainer = document.querySelector(".more");
+const submit = document.getElementById("submit");
+const profile2 = document.querySelector(".profile2");
+
 
 profileBtn.onclick = (() => {
     mobileContainer.style.marginLeft = "0%";
@@ -40,3 +43,22 @@ upBtn.onclick = (() => {
     aboutContainer.style.marginTop = "";
     moreContainer.style.opacity = "0";
 });
+
+submit.addEventListener("click", submited);
+
+function submited() {
+    setTimeout(function() {
+        submit.disabled = true;
+        submit.value = "Message Sent"
+        submit.classList.add("submited")
+    }, 1000);
+
+}
+
+profile2.addEventListener("click", shift);
+
+function shift() {
+    console.log("testing")
+    mobileContainer.style.marginLeft = "3%";
+
+}

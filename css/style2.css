@@ -373,6 +373,11 @@ body {
     cursor: pointer;
 }
 
+.submited {
+    border: 1px solid #f37b6b !important;
+    background-color: transparent !important;
+}
+
 .circle {
     height: 15rem;
     width: 15rem;
@@ -399,6 +404,25 @@ body {
     top: 25rem;
     left: 5rem;
     z-index: -2;
+}
+
+.red-globe {
+    position: absolute;
+    left: -5rem;
+    bottom: -20rem;
+    width: 800px;
+    height: auto;
+    z-index: -2;
+    filter: blur(0px);
+    opacity: 0.4;
+    animation: rotate 100s infinite;
+    animation-delay: 0ms;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
@@ -457,6 +481,13 @@ body {
         margin-top: .5rem;
         height: 2.4rem !important;
         width: 40% !important;
+    }
+    .red-globe {
+        position: absolute;
+        left: 5rem;
+        bottom: -20rem;
+        width: 1000px;
+        height: auto;
     }
 }
 
@@ -569,6 +600,63 @@ body {
     .navigation {
         height: 7rem;
     }
+    .red-globe {
+        position: absolute;
+        left: 5rem;
+        bottom: -20rem;
+        width: 1000px;
+        height: auto;
+    }
+    @media screen and (min-height: 1400px) {
+        .site-navbar .site-logo {
+            font-size: 30px;
+            margin-top: 1rem;
+        }
+        .mobile-container {
+            height: 82vh;
+        }
+        .about-color {
+            height: 82vh;
+        }
+        .main-img-lg {
+            width: 500px;
+            transform: translateX(-300px);
+            margin-top: 4rem !important;
+        }
+        .me {
+            font-size: 4rem;
+        }
+        .text-sec {
+            padding-left: 2rem;
+        }
+        .text-sec p {
+            font-size: 2rem;
+        }
+        .intro-text {
+            margin-top: 15rem;
+        }
+        .know-more-btn {
+            width: 20rem;
+            font-size: 1.5rem;
+        }
+        .skills-Projects .my-h4 {
+            margin-left: 3.5rem;
+        }
+        #card1,
+        #card2,
+        #card3 {
+            width: 20rem;
+        }
+        .card-img {
+            height: 10rem;
+        }
+        .contact-form1 {
+            margin-bottom: 5rem;
+        }
+        .address-row {
+            padding-bottom: 3rem;
+        }
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -620,6 +708,20 @@ body {
     .contact-form1,
     .address {
         padding: 2.5rem 4rem;
+    }
+    .red-globe {
+        position: absolute;
+        left: -25rem;
+        bottom: -20rem;
+        width: 1000px;
+        height: auto;
+    }
+    .circle2 {
+        margin-left: 35rem !important;
+        top: -10rem;
+    }
+    .circle {
+        display: none;
     }
 }
 
@@ -687,6 +789,20 @@ body {
     }
     .navigation {
         margin-top: 2rem;
+    }
+    .red-globe {
+        position: absolute;
+        left: -25rem;
+        bottom: -20rem;
+        width: 1000px;
+        height: auto;
+    }
+    .circle2 {
+        margin-left: 50rem !important;
+        top: -10rem;
+    }
+    .circle {
+        display: none;
     }
 }
 

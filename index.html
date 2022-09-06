@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
@@ -24,9 +25,33 @@
     <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style2.css">
 
     <title>Idogwu Chinonso</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('Ifii9w6TOzyomLCEH');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -48,40 +73,20 @@
             <div class="row align-items-center">
 
                 <div class="col-6 col-xl-2">
-                    <h1 class="mb-0 site-logo "><a href="index.html">Idogwu<span class="design"> ...</span> </a></h1>
+                    <h1 class="mb-0 site-logo "><a href="index.html">Idogwu<span class="design">.js</span> </a></h1>
                 </div>
 
                 <div class="col-12 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li><a href="#home-section" class="nav-link">Home</a></li>
-                            <li class="has-children">
-                                <a href="#about-section" class="nav-link">About Us</a>
-                                <ul class="dropdown">
-                                    <li><a href="#team-section" class="nav-link">Team</a></li>
-                                    <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
-                                    <li><a href="#faq-section" class="nav-link">FAQ</a></li>
-                                    <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
-                                    <li><a href="#services-section" class="nav-link">Services</a></li>
-                                    <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                                    <li class="has-children">
-                                        <a href="#">More Links</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Menu One</a></li>
-                                            <li><a href="#">Menu Two</a></li>
-                                            <li><a href="#">Menu Three</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                            <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                            <li><a href="#contact-section" class="nav-link">Contact</a></li>
-                            <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li>
-                            <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
-                            <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
+                            <li><a class="nav-link profile2">Profile</a></li>
+                            <li><a href="" class="nav-link">Projects</a></li>
+                            <li><a href="" class="nav-link">Contact</a></li>
+                            <li class="social"><a href="https://web.facebook.com/idogwu.chinonso.1/" class="nav-link" target="_blank"><span class="icon-facebook"></span></a></li>
+                            <li class="social"><a href="https://mobile.twitter.com/ChinonsoIdogwu" target="_blank" class="nav-link"><span class="icon-twitter"></span></a></li>
+                            <li class="social"><a href="https://ng.linkedin.com/in/idogwu-chinonso-a9117b1a3" class="nav-link" target="_blank"><span class="icon-linkedin"></span></a></li>
+                            <li class="social"><a href="https://t.co/eIp9riWHfd" class="nav-link" target="_blank"><span class="icon-github"></span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -102,7 +107,7 @@
                 <div class="about-color about-color1">
                     <div class="row">
                         <div class="img-sec col-12 col-sm-12 col-md-4 order-md-2">
-                            <img class="main-img" src="./images/pics4web.png" alt="">
+                            <img class="main-img" src="./images/pics4web-min.png" alt="">
                             <img class="main-img-lg" src="./images/pics-4-website.png" alt="">
                             <img class="rotate" src="./images/pattern-bg.svg" alt="">
                         </div>
@@ -373,14 +378,15 @@
                             <p>
                                 Drop a message lets connect!
                             </p>
-                            <form action="">
-                                <input type="text" name="name" placeholder="Name" id="">
+                            <form action="" id="contact-form">
+                                <input type="hidden" name="contact_number">
+                                <input type="text" name="user_name" placeholder="Name" id="">
 
-                                <input type="email" name="email" placeholder="Email" id="">
+                                <input type="email" name="user_email" placeholder="Email" id="">
 
                                 <textarea name="message" placeholder="Your Message" id="" cols="30" rows="3"></textarea>
 
-                                <input class="submit" type="submit" value="Send">
+                                <input class="submit" type="submit" id="submit" value="Send">
                             </form>
                         </div>
                     </div>
@@ -410,7 +416,7 @@
                                     Email:
                                 </h6>
                                 <p class="mb-0">
-                                    idogwuchinonso
+                                    idogwuchi@gmail.com
                                 </p>
                             </div>
                         </div>
@@ -418,7 +424,7 @@
                 </div>
             </div>
         </div>
-
+        <img src="./images/earth.png" class="red-globe" alt="">
         <div class="circle">
         </div>
         <div class=" circle2">
