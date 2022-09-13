@@ -6,14 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 
-
+    <!-- animiate on scroll -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <!-- font family -->
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
@@ -59,6 +58,11 @@
                             email.value = '';
                             message.value = '';
                         }, 1000);
+                        setTimeout(function() {
+                            submit.disabled = false;
+                            submit.value = "Send"
+                            submit.classList.remove("submited")
+                        }, 5000);
                     }, function(error) {
                         console.log('FAILED...', error);
                     });
@@ -95,38 +99,33 @@
                     <nav class="site-navigation position-relative text-right" role="navigation">
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li><a class="nav-link profile2">Profile</a></li>
-                            <li><a href="" class="nav-link">Projects</a></li>
-                            <li><a href="" class="nav-link">Contact</a></li>
+                            <li><a href="" class="nav-link profile2" onclick="profile()">Profile</a></li>
+                            <li><a href="" class="nav-link" onclick="projects()">Projects</a></li>
+                            <li><a href="" class="nav-link" onclick="contact()">Contact</a></li>
                             <li class="social"><a href="https://web.facebook.com/idogwu.chinonso.1/" class="nav-link" target="_blank"><span class="icon-facebook"></span></a></li>
                             <li class="social"><a href="https://mobile.twitter.com/ChinonsoIdogwu" target="_blank" class="nav-link"><span class="icon-twitter"></span></a></li>
                             <li class="social"><a href="https://ng.linkedin.com/in/idogwu-chinonso-a9117b1a3" class="nav-link" target="_blank"><span class="icon-linkedin"></span></a></li>
                             <li class="social"><a href="https://t.co/eIp9riWHfd" class="nav-link" target="_blank"><span class="icon-github"></span></a></li>
+                            <li><a class="nav-link branding">Designed by Idogwu Chinonso</a></li>
                         </ul>
                     </nav>
                 </div>
-
-
                 <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
             </div>
         </div>
-
     </header>
 
     <div class="container-fluid main-container">
-
         <div class="mobile-container">
-
             <div class="about-me mobile-sec">
-                <div class="about-color about-color1" data-aos="fade-right">
+                <div class="about-color about-color1 " data-aos="fade-right">
                     <div class="row">
-                        <div class="img-sec col-12 col-sm-12 col-md-4 order-md-2">
+                        <div class="img-sec col-12 col-sm-12 col-md-4 order-md-2 wow animiated animate__animated animate__backInLeft animate__slow">
                             <img class="main-img" src="./images/pics4web-min.png" alt="">
                             <img class="main-img-lg" src="./images/pics-4-website.png" alt="">
                             <img class="rotate" src="./images/pattern-bg.svg" alt="">
                         </div>
-                        <div class="text-sec col-sm-12 col-12 col-md-8">
+                        <div class="text-sec col-sm-12 col-12 col-md-8 wow animiated animate__animated animate__backInRight animate__slow">
                             <div class="col .align-self-end intro-text">
                                 <p class="hail">
                                     HELLO THERE,
@@ -138,11 +137,11 @@
                                 <h1 class="me ml-5">
                                     CHINONSO,
                                 </h1>
-                                <p>
-                                    a frontend developer based in Nigeria.
+                                <p class="desc">
+                                    A frontend developer based in Nigeria.
                                 </p>
                                 <div class="know-more">
-                                    <button class=" btn move-down know-more-btn"> MORE ABOUT ME </button>
+                                    <button class=" btn move-down know-more-btn"> <span>MORE ABOUT ME</span>  </button>
                                 </div>
                             </div>
                         </div>
@@ -157,8 +156,8 @@
                         <span class="design">...</span>
                     </h4>
                     <p class="mb-2">
-                        I'm a growing frontend developer with under one year experience converting still life designs to modern interactive websites. i'm also a graphics designer, a problem solver, a lover of animiated movies, good music, mobile and desktop games. I'm currently
-                        available for intenship / job opportunities globally.
+                        I'm a growing frontend developer with under one year experience converting still life designs to modern interactive websites, i'm a goal getter and a team player. i'm also a graphics designer, a problem solver, a lover of animiated movies, good music,
+                        mobile and desktop games. I'm currently available for internship / job opportunities globally.
                     </p>
                 </div>
 
@@ -388,7 +387,7 @@
                                 Contact Me <span class="design">...</span>
                             </h4>
                             <p>
-                                Have an exciting intrenship, job placement or project that could use my help?
+                                Have an internship, job placement or exciting project that could use my help?
                             </p>
                             <p>
                                 Drop a message lets connect!
@@ -475,10 +474,11 @@
     </div>
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
     <script>
         AOS.init();
+        new WOW().init();
     </script>
 
 

@@ -96,6 +96,10 @@ body {
     margin-top: 1.5rem;
 }
 
+.desc {
+    font-size: 1.2rem;
+}
+
 .design {
     color: #f37b6b;
     font-size: 1.6rem;
@@ -109,7 +113,7 @@ body {
 .img-sec img {
     height: auto;
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: .2rem;
 }
 
 .main-img-lg {
@@ -136,6 +140,70 @@ body {
     padding-left: 14px;
     padding-right: 14px;
     transition: all .5s ease-in;
+    position: relative;
+    z-index: 3;
+}
+
+.know-more-btn span {
+    z-index: 10;
+}
+
+.know-more-btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: transparent;
+    border-right: 1.5px solid #f37b6b;
+    border-left: 1.5px solid #f37b6b;
+    transition: all .35s ease;
+    animation: drawUp 0.82s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+.know-more-btn::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: transparent;
+    border-top: 1.5px solid #f37b6b;
+    border-bottom: 1.5px solid #f37b6b;
+    transition: all .35s ease;
+    animation: draw 0.82s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+@keyframes drawUp {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 100%;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes draw {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
 }
 
 .know-more-btn:hover {
@@ -192,9 +260,19 @@ body {
     color: #e4e6eb;
 }
 
+.my-h4 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
 .skills-Projects {
     margin-left: .1rem;
     padding: .5rem;
+}
+
+.skills-Projects h4 {
+    margin-left: 1.5rem;
 }
 
 .skills-sec {
@@ -306,7 +384,7 @@ body {
 
 .contact-form input {
     width: 100%;
-    color: #b3b3b3;
+    color: #e4e6eb;
     border-radius: 7px;
     height: 2.3rem;
     padding-left: .7rem;
@@ -424,6 +502,13 @@ body {
 @keyframes rotate {
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .branding {
+        text-align: center;
+        margin-top: 5rem;
     }
 }
 
@@ -737,12 +822,12 @@ body {
     }
     .main-img-lg {
         display: block;
-        max-width: 380px;
+        max-width: 350px;
         height: auto;
         transform: translateX(-150px);
     }
     .img-sec img {
-        margin-top: 1rem;
+        margin-top: 3rem;
     }
     .text-sec {
         margin-top: 10%;
