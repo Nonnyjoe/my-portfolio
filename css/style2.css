@@ -499,6 +499,10 @@ body {
     animation-delay: 0ms;
 }
 
+.branding {
+    display: none !important;
+}
+
 @keyframes rotate {
     100% {
         transform: rotate(360deg);
@@ -509,6 +513,7 @@ body {
     .branding {
         text-align: center;
         margin-top: 5rem;
+        display: block !important;
     }
 }
 
@@ -889,6 +894,9 @@ body {
         top: -10rem;
     }
     .circle {
+        display: none;
+    }
+    .branding {
         display: none;
     }
 }
